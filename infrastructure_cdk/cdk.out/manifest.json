@@ -1,0 +1,2685 @@
+{
+  "version": "13.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "LambdaStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://489811560964/eu-central-1",
+      "properties": {
+        "templateFile": "LambdaStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/LambdaStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.91f13ac0b84a7e36281c4f56c34906fe156fe678e3974933ca3b6548ba234761",
+              "id": "91f13ac0b84a7e36281c4f56c34906fe156fe678e3974933ca3b6548ba234761",
+              "packaging": "zip",
+              "sourceHash": "91f13ac0b84a7e36281c4f56c34906fe156fe678e3974933ca3b6548ba234761",
+              "s3BucketParameter": "AssetParameters91f13ac0b84a7e36281c4f56c34906fe156fe678e3974933ca3b6548ba234761S3BucketDA7EBB1B",
+              "s3KeyParameter": "AssetParameters91f13ac0b84a7e36281c4f56c34906fe156fe678e3974933ca3b6548ba234761S3VersionKey2F12D528",
+              "artifactHashParameter": "AssetParameters91f13ac0b84a7e36281c4f56c34906fe156fe678e3974933ca3b6548ba234761ArtifactHash96669B77"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/construct-compat.js:405:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:175:29)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:83:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack.js:425:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:87:31)",
+              "new Asset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:40:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-lambda/lib/code.js:258:26)",
+              "new Function (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-lambda/lib/function.js:98:33)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          },
+          {
+            "type": "aws:cdk:warning",
+            "data": "This stack doesen't have temination protection enabled!",
+            "trace": [
+              "Annotations.addMessage (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/annotations.js:94:42)",
+              "Annotations.addWarning (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/annotations.js:37:14)",
+              "ConstructNode.addWarning (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/construct-compat.js:427:49)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.completeCallback (/tmp/tmp8e6nr5z9/lib/program.js:9679:33)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9721:24)",
+              "KernelHost.completeCallback (/tmp/tmp8e6nr5z9/lib/program.js:9679:33)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9721:24)",
+              "KernelHost.completeCallback (/tmp/tmp8e6nr5z9/lib/program.js:9679:33)",
+              "KernelHost.callbackHandler (/tmp/tmp8e6nr5z9/lib/program.js:9666:41)",
+              "Object.value (/tmp/tmp8e6nr5z9/lib/program.js:8536:49)",
+              "recurse (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/WelcomeHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WelcomeHandlerServiceRoleA03808BE",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "new Function (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-lambda/lib/function.js:80:35)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/WelcomeHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WelcomeHandlerBD29C4C1",
+            "trace": [
+              "new Function (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-lambda/lib/function.js:136:26)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/AssetParameters/91f13ac0b84a7e36281c4f56c34906fe156fe678e3974933ca3b6548ba234761/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters91f13ac0b84a7e36281c4f56c34906fe156fe678e3974933ca3b6548ba234761S3BucketDA7EBB1B",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:162:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:83:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack.js:425:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:87:31)",
+              "new Asset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:40:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-lambda/lib/code.js:258:26)",
+              "new Function (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-lambda/lib/function.js:98:33)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/AssetParameters/91f13ac0b84a7e36281c4f56c34906fe156fe678e3974933ca3b6548ba234761/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters91f13ac0b84a7e36281c4f56c34906fe156fe678e3974933ca3b6548ba234761S3VersionKey2F12D528",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:162:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:83:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack.js:425:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:87:31)",
+              "new Asset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:40:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-lambda/lib/code.js:258:26)",
+              "new Function (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-lambda/lib/function.js:98:33)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/AssetParameters/91f13ac0b84a7e36281c4f56c34906fe156fe678e3974933ca3b6548ba234761/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters91f13ac0b84a7e36281c4f56c34906fe156fe678e3974933ca3b6548ba234761ArtifactHash96669B77",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:162:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:83:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack.js:425:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:87:31)",
+              "new Asset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:40:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-lambda/lib/code.js:258:26)",
+              "new Function (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-lambda/lib/function.js:98:33)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/ApiEndpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiEndpointA9C748C3",
+            "trace": [
+              "new RestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:401:26)",
+              "new LambdaRestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:25:9)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/ApiEndpoint/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiEndpointCloudWatchRoleC2D8C242",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "LambdaRestApi._configureCloudWatchRole (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:250:22)",
+              "new RestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:418:18)",
+              "new LambdaRestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:25:9)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/ApiEndpoint/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiEndpointAccount6C3684AA",
+            "trace": [
+              "LambdaRestApi._configureCloudWatchRole (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:254:26)",
+              "new RestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:418:18)",
+              "new LambdaRestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:25:9)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/ApiEndpoint/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiEndpointDeploymentECBE0D14d9f949596f3bc366a3bf998a069f9029",
+            "trace": [
+              "new Deployment (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/deployment.js:48:25)",
+              "LambdaRestApi._configureDeployment (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:278:38)",
+              "new RestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:420:14)",
+              "new LambdaRestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:25:9)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/ApiEndpoint/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiEndpointDeploymentStageprod8D065908",
+            "trace": [
+              "new Stage (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/stage.js:61:26)",
+              "LambdaRestApi._configureDeployment (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:286:36)",
+              "new RestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:420:14)",
+              "new LambdaRestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:25:9)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/ApiEndpoint/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiEndpointB4684BCC",
+            "trace": [
+              "LambdaRestApi._configureDeployment (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:290:13)",
+              "new RestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/restapi.js:420:14)",
+              "new LambdaRestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:25:9)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/ApiEndpoint/Default/{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiEndpointproxyD95AAEDD",
+            "trace": [
+              "new Resource (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:231:26)",
+              "new ProxyResource (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:309:9)",
+              "RootResource.addProxy (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:44:16)",
+              "new LambdaRestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:31:23)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/ApiEndpoint/Default/{proxy+}/ANY/ApiPermission.LambdaStackApiEndpoint1ED9976C.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiEndpointproxyANYApiPermissionLambdaStackApiEndpoint1ED9976CANYproxy1E1E0E28",
+            "trace": [
+              "Function.addPermission (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:42:9)",
+              "LambdaIntegration.bind (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:44:22)",
+              "new Method (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/method.js:41:40)",
+              "ProxyResource.addMethod (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+              "ProxyResource.addMethod (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:334:22)",
+              "new ProxyResource (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:317:35)",
+              "RootResource.addProxy (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:44:16)",
+              "new LambdaRestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:31:23)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/ApiEndpoint/Default/{proxy+}/ANY/ApiPermission.Test.LambdaStackApiEndpoint1ED9976C.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiEndpointproxyANYApiPermissionTestLambdaStackApiEndpoint1ED9976CANYproxy810CDF25",
+            "trace": [
+              "Function.addPermission (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:42:9)",
+              "LambdaIntegration.bind (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:51:26)",
+              "new Method (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/method.js:41:40)",
+              "ProxyResource.addMethod (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+              "ProxyResource.addMethod (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:334:22)",
+              "new ProxyResource (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:317:35)",
+              "RootResource.addProxy (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:44:16)",
+              "new LambdaRestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:31:23)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/ApiEndpoint/Default/{proxy+}/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiEndpointproxyANY79B6CDFF",
+            "trace": [
+              "new Method (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/method.js:57:26)",
+              "ProxyResource.addMethod (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+              "ProxyResource.addMethod (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:334:22)",
+              "new ProxyResource (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:317:35)",
+              "RootResource.addProxy (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:44:16)",
+              "new LambdaRestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:31:23)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/ApiEndpoint/Default/ANY/ApiPermission.LambdaStackApiEndpoint1ED9976C.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiEndpointANYApiPermissionLambdaStackApiEndpoint1ED9976CANY24950621",
+            "trace": [
+              "Function.addPermission (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:42:9)",
+              "LambdaIntegration.bind (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:44:22)",
+              "new Method (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/method.js:41:40)",
+              "RootResource.addMethod (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+              "ProxyResource.addMethod (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:331:37)",
+              "new ProxyResource (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:317:35)",
+              "RootResource.addProxy (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:44:16)",
+              "new LambdaRestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:31:23)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/ApiEndpoint/Default/ANY/ApiPermission.Test.LambdaStackApiEndpoint1ED9976C.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiEndpointANYApiPermissionTestLambdaStackApiEndpoint1ED9976CANY8CCC5A5E",
+            "trace": [
+              "Function.addPermission (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:42:9)",
+              "LambdaIntegration.bind (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.js:51:26)",
+              "new Method (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/method.js:41:40)",
+              "RootResource.addMethod (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+              "ProxyResource.addMethod (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:331:37)",
+              "new ProxyResource (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:317:35)",
+              "RootResource.addProxy (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:44:16)",
+              "new LambdaRestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:31:23)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/ApiEndpoint/Default/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiEndpointANYAB50CE9B",
+            "trace": [
+              "new Method (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/method.js:57:26)",
+              "RootResource.addMethod (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:36:16)",
+              "ProxyResource.addMethod (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:331:37)",
+              "new ProxyResource (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:317:35)",
+              "RootResource.addProxy (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/resource.js:44:16)",
+              "new LambdaRestApi (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.js:31:23)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/LambdaStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "LambdaStack"
+    },
+    "NetworkStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://489811560964/eu-central-1",
+      "properties": {
+        "templateFile": "NetworkStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/NetworkStack": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "This stack doesen't have temination protection enabled!",
+            "trace": [
+              "Annotations.addMessage (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/annotations.js:94:42)",
+              "Annotations.addWarning (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/annotations.js:37:14)",
+              "ConstructNode.addWarning (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/construct-compat.js:427:49)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.completeCallback (/tmp/tmp8e6nr5z9/lib/program.js:9679:33)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9721:24)",
+              "KernelHost.completeCallback (/tmp/tmp8e6nr5z9/lib/program.js:9679:33)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9721:24)",
+              "KernelHost.completeCallback (/tmp/tmp8e6nr5z9/lib/program.js:9679:33)",
+              "KernelHost.callbackHandler (/tmp/tmp8e6nr5z9/lib/program.js:9666:41)",
+              "Object.value (/tmp/tmp8e6nr5z9/lib/program.js:8536:49)",
+              "recurse (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCB9E5F0B4",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:355:25)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet1SubnetB4246D30",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PublicSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet1RouteTableFEE4B781",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PublicSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet1RouteTableAssociation0B0896DC",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PublicSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet1DefaultRoute91CEF279",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:735:23)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:388:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:387:32)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet1EIP6AD938E8",
+            "trace": [
+              "PublicSubnet.addNatGateway (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:864:27)",
+              "NatGatewayProvider.configureNat (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/nat.js:82:33)",
+              "Vpc.createNatGateways (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:535:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:393:22)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet1NATGatewayE0556630",
+            "trace": [
+              "PublicSubnet.addNatGateway (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:862:21)",
+              "NatGatewayProvider.configureNat (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/nat.js:82:33)",
+              "Vpc.createNatGateways (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:535:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:393:22)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet2Subnet74179F39",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PublicSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet2RouteTable6F1A15F1",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PublicSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet2RouteTableAssociation5A808732",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PublicSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet2DefaultRouteB7481BBA",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:735:23)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:388:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:387:32)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PublicSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet3Subnet631C5E25",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PublicSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PublicSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet3RouteTable98AE0E14",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PublicSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PublicSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet3RouteTableAssociation427FE0C6",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PublicSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:844:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:577:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PublicSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet3DefaultRouteA0D29D46",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:735:23)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:388:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:387:32)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet1Subnet8BCA10E0",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet1RouteTableBE8A6027",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet1RouteTableAssociation347902D1",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet1DefaultRouteAE1D6490",
+            "trace": [
+              "PrivateSubnet.addRoute (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:782:23)",
+              "NatGatewayProvider.configureSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/nat.js:97:16)",
+              "NatGatewayProvider.configureNat (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/nat.js:91:18)",
+              "Vpc.createNatGateways (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:535:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:393:22)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet2SubnetCFCDAA7A",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet2RouteTable0A19E10E",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet2RouteTableAssociation0C73D413",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet2DefaultRouteF4F5CFD2",
+            "trace": [
+              "PrivateSubnet.addRoute (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:782:23)",
+              "NatGatewayProvider.configureSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/nat.js:97:16)",
+              "NatGatewayProvider.configureNat (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/nat.js:91:18)",
+              "Vpc.createNatGateways (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:535:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:393:22)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PrivateSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet3Subnet3EDCD457",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PrivateSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet3RouteTable192186F8",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PrivateSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet3RouteTableAssociationC28D144E",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:582:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/PrivateSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet3DefaultRoute27F311AE",
+            "trace": [
+              "PrivateSubnet.addRoute (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:782:23)",
+              "NatGatewayProvider.configureSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/nat.js:97:16)",
+              "NatGatewayProvider.configureNat (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/nat.js:91:18)",
+              "Vpc.createNatGateways (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:535:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:393:22)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/ISOLATEDSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCISOLATEDSubnet1SubnetD4E61E76",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:587:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/ISOLATEDSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCISOLATEDSubnet1RouteTableBBB8760C",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:587:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/ISOLATEDSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCISOLATEDSubnet1RouteTableAssociationFEC8D2D9",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:587:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/ISOLATEDSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCISOLATEDSubnet2SubnetE13E750D",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:587:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/ISOLATEDSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCISOLATEDSubnet2RouteTable5EEB575B",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:587:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/ISOLATEDSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCISOLATEDSubnet2RouteTableAssociationBF87B745",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:587:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/ISOLATEDSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCISOLATEDSubnet3Subnet439B8BD8",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:679:24)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:587:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/ISOLATEDSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCISOLATEDSubnet3RouteTableA11E598D",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:695:23)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:587:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/ISOLATEDSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCISOLATEDSubnet3RouteTableAssociation6B41AC78",
+            "trace": [
+              "new Subnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:700:9)",
+              "new PrivateSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:884:9)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:587:44",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:32)",
+              "Vpc.createSubnets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:18)",
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:376:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCIGWB7E252D3",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:380:25)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/VPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCVPCGW99B986DC",
+            "trace": [
+              "new Vpc (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:383:25)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/DBNacl/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBNacl708D271E",
+            "trace": [
+              "new NetworkAcl (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:43:27)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/DBNacl/DefaultAssociationNetworkStackVPCISOLATEDSubnet16C95F7A8/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBNaclDefaultAssociationNetworkStackVPCISOLATEDSubnet16C95F7A8109058BD",
+            "trace": [
+              "new SubnetNetworkAclAssociation (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:154:28)",
+              "PrivateSubnet.associateNetworkAcl (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:801:9)",
+              "NetworkAcl.associateWithSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:74:20)",
+              "new NetworkAcl (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:49:18)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/DBNacl/DefaultAssociationNetworkStackVPCISOLATEDSubnet261461DAD/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBNaclDefaultAssociationNetworkStackVPCISOLATEDSubnet261461DADC288B154",
+            "trace": [
+              "new SubnetNetworkAclAssociation (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:154:28)",
+              "PrivateSubnet.associateNetworkAcl (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:801:9)",
+              "NetworkAcl.associateWithSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:74:20)",
+              "new NetworkAcl (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:49:18)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/DBNacl/DefaultAssociationNetworkStackVPCISOLATEDSubnet3245E81EA/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBNaclDefaultAssociationNetworkStackVPCISOLATEDSubnet3245E81EAF207F5EF",
+            "trace": [
+              "new SubnetNetworkAclAssociation (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:154:28)",
+              "PrivateSubnet.associateNetworkAcl (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:801:9)",
+              "NetworkAcl.associateWithSubnet (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:74:20)",
+              "new NetworkAcl (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:49:18)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/DBNacl/DBNaclIngress100/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBNaclDBNaclIngress100BCF266D8",
+            "trace": [
+              "new NetworkAclEntry (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:123:9)",
+              "NetworkAcl.addEntry (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:20:16)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/DBNacl/DBNaclEgress100/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBNaclDBNaclEgress1006CFE95CA",
+            "trace": [
+              "new NetworkAclEntry (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:123:9)",
+              "NetworkAcl.addEntry (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:20:16)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/DBNacl/DBNaclIngress200/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBNaclDBNaclIngress2006334BB03",
+            "trace": [
+              "new NetworkAclEntry (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:123:9)",
+              "NetworkAcl.addEntry (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:20:16)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/DBNacl/DBNaclEgress200/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBNaclDBNaclEgress200D658B539",
+            "trace": [
+              "new NetworkAclEntry (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:123:9)",
+              "NetworkAcl.addEntry (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:20:16)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/DBNacl/DBNaclIngress300/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBNaclDBNaclIngress3009FBEB0DE",
+            "trace": [
+              "new NetworkAclEntry (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:123:9)",
+              "NetworkAcl.addEntry (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:20:16)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/DBNacl/DBNaclEgress300/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBNaclDBNaclEgress30014F769A9",
+            "trace": [
+              "new NetworkAclEntry (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:123:9)",
+              "NetworkAcl.addEntry (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/network-acl.js:20:16)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/Exports/Output{\"Ref\":\"VPCB9E5F0B4\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefVPCB9E5F0B4BD23A326",
+            "trace": [
+              "Stack.exportValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack.js:615:13)",
+              "createImportValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:138:39)",
+              "resolveValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:84:12)",
+              "Object.resolveReferences (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:25:30)",
+              "Object.prepareApp (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/prepare-app.js:30:12)",
+              "Object.synthesize (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:21:19)",
+              "App.synth (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/Exports/Output{\"Ref\":\"VPCPrivateSubnet1Subnet8BCA10E0\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefVPCPrivateSubnet1Subnet8BCA10E01F79A1B7",
+            "trace": [
+              "Stack.exportValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack.js:615:13)",
+              "createImportValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:138:39)",
+              "resolveValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:84:12)",
+              "Object.resolveReferences (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:25:30)",
+              "Object.prepareApp (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/prepare-app.js:30:12)",
+              "Object.synthesize (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:21:19)",
+              "App.synth (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/Exports/Output{\"Ref\":\"VPCPublicSubnet1SubnetB4246D30\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefVPCPublicSubnet1SubnetB4246D30D84F935B",
+            "trace": [
+              "Stack.exportValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack.js:615:13)",
+              "createImportValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:138:39)",
+              "resolveValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:84:12)",
+              "Object.resolveReferences (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:25:30)",
+              "Object.prepareApp (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/prepare-app.js:30:12)",
+              "Object.synthesize (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:21:19)",
+              "App.synth (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/Exports/Output{\"Ref\":\"VPCPublicSubnet2Subnet74179F39\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefVPCPublicSubnet2Subnet74179F3969CC10AD",
+            "trace": [
+              "Stack.exportValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack.js:615:13)",
+              "createImportValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:138:39)",
+              "resolveValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:84:12)",
+              "Object.resolveReferences (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:25:30)",
+              "Object.prepareApp (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/prepare-app.js:30:12)",
+              "Object.synthesize (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:21:19)",
+              "App.synth (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/Exports/Output{\"Ref\":\"VPCPublicSubnet3Subnet631C5E25\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefVPCPublicSubnet3Subnet631C5E25B13F8123",
+            "trace": [
+              "Stack.exportValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack.js:615:13)",
+              "createImportValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:138:39)",
+              "resolveValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:84:12)",
+              "Object.resolveReferences (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:25:30)",
+              "Object.prepareApp (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/prepare-app.js:30:12)",
+              "Object.synthesize (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:21:19)",
+              "App.synth (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/Exports/Output{\"Ref\":\"VPCPrivateSubnet2SubnetCFCDAA7A\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefVPCPrivateSubnet2SubnetCFCDAA7AB22CF85D",
+            "trace": [
+              "Stack.exportValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack.js:615:13)",
+              "createImportValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:138:39)",
+              "resolveValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:84:12)",
+              "Object.resolveReferences (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:25:30)",
+              "Object.prepareApp (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/prepare-app.js:30:12)",
+              "Object.synthesize (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:21:19)",
+              "App.synth (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/NetworkStack/Exports/Output{\"Ref\":\"VPCPrivateSubnet3Subnet3EDCD457\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefVPCPrivateSubnet3Subnet3EDCD457113A215F",
+            "trace": [
+              "Stack.exportValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack.js:615:13)",
+              "createImportValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:138:39)",
+              "resolveValue (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:84:12)",
+              "Object.resolveReferences (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/refs.js:25:30)",
+              "Object.prepareApp (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/prepare-app.js:30:12)",
+              "Object.synthesize (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:21:19)",
+              "App.synth (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "NetworkStack"
+    },
+    "InstanceStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://489811560964/eu-central-1",
+      "properties": {
+        "templateFile": "InstanceStack.template.json",
+        "validateOnSynth": false
+      },
+      "dependencies": [
+        "NetworkStack"
+      ],
+      "metadata": {
+        "/InstanceStack": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "This stack doesen't have temination protection enabled!",
+            "trace": [
+              "Annotations.addMessage (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/annotations.js:94:42)",
+              "Annotations.addWarning (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/annotations.js:37:14)",
+              "ConstructNode.addWarning (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/construct-compat.js:427:49)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.completeCallback (/tmp/tmp8e6nr5z9/lib/program.js:9679:33)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9721:24)",
+              "KernelHost.completeCallback (/tmp/tmp8e6nr5z9/lib/program.js:9679:33)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9721:24)",
+              "KernelHost.completeCallback (/tmp/tmp8e6nr5z9/lib/program.js:9679:33)",
+              "KernelHost.callbackHandler (/tmp/tmp8e6nr5z9/lib/program.js:9666:41)",
+              "Object.value (/tmp/tmp8e6nr5z9/lib/program.js:8536:49)",
+              "recurse (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/Bastion/Resource/InstanceSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionInstanceSecurityGroup71C3847E",
+            "trace": [
+              "new SecurityGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:215:30)",
+              "new Instance (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/instance.js:38:34)",
+              "new BastionHostLinux (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/bastion-host.js:33:25)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/Bastion/Resource/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionInstanceRoleD3B36EDD",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "new Instance (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/instance.js:46:35)",
+              "new BastionHostLinux (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/bastion-host.js:33:25)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/Bastion/Resource/InstanceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionInstanceRoleDefaultPolicy457C3156",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-iam/lib/role.js:209:34)",
+              "Instance.addToRolePolicy (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/instance.js:166:19)",
+              "new BastionHostLinux (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/bastion-host.js:46:23)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/Bastion/Resource/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionInstanceProfile8FFAF242",
+            "trace": [
+              "new Instance (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/instance.js:50:28)",
+              "new BastionHostLinux (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/bastion-host.js:33:25)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/Bastion/Resource/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Bastion6045F255",
+            "trace": [
+              "new Instance (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/instance.js:85:25)",
+              "new BastionHostLinux (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/bastion-host.js:33:25)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/Bastion/BastionHostId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BastionBastionHostId8F8CEB82",
+            "trace": [
+              "new BastionHostLinux (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/bastion-host.js:63:9)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
+            "trace": [
+              "Function.fromStringParameterAttributes (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:134:15)",
+              "Function.valueForTypedStringParameter (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:208:21)",
+              "AmazonLinuxImage.getImage (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/machine-image.js:127:41)",
+              "new Instance (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/instance.js:54:48)",
+              "new BastionHostLinux (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/bastion-host.js:33:25)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/ALB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALBAEE750D2",
+            "trace": [
+              "new BaseLoadBalancer (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-load-balancer.js:35:26)",
+              "new ApplicationLoadBalancer (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.js:28:9)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/ALB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALBSecurityGroup8B8624F8",
+            "trace": [
+              "new SecurityGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:215:30)",
+              "new ApplicationLoadBalancer (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.js:34:56)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/ALB/SecurityGroup/to InstanceStackGlobalmanticsWebInstanceSecurityGroup28A61C77:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALBSecurityGrouptoInstanceStackGlobalmanticsWebInstanceSecurityGroup28A61C7780E47E9385",
+            "trace": [
+              "SecurityGroup.addEgressRule (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:72:13)",
+              "SecurityGroup.addEgressRule (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:347:19)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:81:31",
+              "ReactiveList.forEachAndForever (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:226:13)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:80:51",
+              "ReactiveList.forEachAndForever (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:226:13)",
+              "Connections.allowTo (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:79:30)",
+              "Connections.allowFrom (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:112:31)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/ALB/Web/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALBWeb606B0C4F",
+            "trace": [
+              "new BaseListener (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-listener.js:21:26)",
+              "new ApplicationListener (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:32:9)",
+              "ApplicationLoadBalancer.addListener (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.js:74:26)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/ALB/Web/addTargetGroupGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALBWebaddTargetGroupGroup2DA44672",
+            "trace": [
+              "new TargetGroupBase (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-target-group.js:44:25)",
+              "new ApplicationTargetGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:26:9)",
+              "ApplicationListener.addTargets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:228:23)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/Globalmantics-Web": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "desiredCapacity has been configured. Be aware this will reset the size of your AutoScalingGroup on every deployment. See https://github.com/aws/aws-cdk/issues/5215",
+            "trace": [
+              "Annotations.addMessage (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/annotations.js:94:42)",
+              "Annotations.addWarning (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/annotations.js:37:14)",
+              "new AutoScalingGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.js:476:41)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/Globalmantics-Web/InstanceSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsWebInstanceSecurityGroup316D3AB3",
+            "trace": [
+              "new SecurityGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:215:30)",
+              "new AutoScalingGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.js:413:53)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/Globalmantics-Web/InstanceSecurityGroup/from InstanceStackALBSecurityGroup68F3C52C:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsWebInstanceSecurityGroupfromInstanceStackALBSecurityGroup68F3C52C80DFFE536E",
+            "trace": [
+              "SecurityGroup.addIngressRule (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:57:13)",
+              "SecurityGroup.addIngressRule (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:307:19)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:106:31",
+              "ReactiveList.forEachAndForever (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:226:13)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:105:51",
+              "ReactiveList.forEachAndForever (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:226:13)",
+              "Connections.allowFrom (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:104:30)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/Globalmantics-Web/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsWebInstanceRole73AF3E7D",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "new AutoScalingGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.js:420:35)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/Globalmantics-Web/InstanceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsWebInstanceRoleDefaultPolicy8FF2CB83",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-iam/lib/role.js:209:34)",
+              "AutoScalingGroup.addToRolePolicy (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.js:615:19)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/Globalmantics-Web/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsWebInstanceProfileEE95F5E0",
+            "trace": [
+              "new AutoScalingGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.js:428:28)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/Globalmantics-Web/LaunchConfig": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsWebLaunchConfigB11CE1EB",
+            "trace": [
+              "new AutoScalingGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.js:436:30)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/Globalmantics-Web/ASG": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsWebASG5F6CEB0B",
+            "trace": [
+              "new AutoScalingGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.js:521:33)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/ElbEndpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ElbEndpoint",
+            "trace": [
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/InstanceStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "InstanceStack"
+    },
+    "EcsStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://489811560964/eu-central-1",
+      "properties": {
+        "templateFile": "EcsStack.template.json",
+        "validateOnSynth": false
+      },
+      "dependencies": [
+        "NetworkStack"
+      ],
+      "metadata": {
+        "/EcsStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "repositoryName": "aws-cdk/assets",
+              "imageTag": "7947cc96e9ef22eda3bb5f48e1e03b43057e9a0d21e45f2e03449e2da144c3f5",
+              "id": "7947cc96e9ef22eda3bb5f48e1e03b43057e9a0d21e45f2e03449e2da144c3f5",
+              "packaging": "container-image",
+              "path": "asset.7947cc96e9ef22eda3bb5f48e1e03b43057e9a0d21e45f2e03449e2da144c3f5",
+              "sourceHash": "7947cc96e9ef22eda3bb5f48e1e03b43057e9a0d21e45f2e03449e2da144c3f5"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/construct-compat.js:405:62)",
+              "LegacyStackSynthesizer.doAddDockerImageAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:150:29)",
+              "LegacyStackSynthesizer.addDockerImageAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:105:25)",
+              "Stack.addDockerImageAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack.js:434:33)",
+              "LegacyStackSynthesizer.addDockerImageAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:109:31)",
+              "new DockerImageAsset (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecr-assets/lib/image-asset.js:99:44)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          },
+          {
+            "type": "aws:cdk:warning",
+            "data": "This stack doesen't have temination protection enabled!",
+            "trace": [
+              "Annotations.addMessage (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/annotations.js:94:42)",
+              "Annotations.addWarning (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/annotations.js:37:14)",
+              "ConstructNode.addWarning (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/construct-compat.js:427:49)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.completeCallback (/tmp/tmp8e6nr5z9/lib/program.js:9679:33)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9721:24)",
+              "KernelHost.completeCallback (/tmp/tmp8e6nr5z9/lib/program.js:9679:33)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9721:24)",
+              "KernelHost.completeCallback (/tmp/tmp8e6nr5z9/lib/program.js:9679:33)",
+              "KernelHost.callbackHandler (/tmp/tmp8e6nr5z9/lib/program.js:9666:41)",
+              "Object.value (/tmp/tmp8e6nr5z9/lib/program.js:8536:49)",
+              "recurse (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:86:20)",
+              "recurse (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:98:17)",
+              "invokeAspects (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:72:5)",
+              "Object.synthesize (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)",
+              "App.synth (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/EcsStack/Globalmantics-Ecs-Cluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsEcsClusterABC1AF85",
+            "trace": [
+              "new Cluster (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/cluster.js:79:25)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/EcsStack/Globalmantics-Fargate/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsFargateLB78042049",
+            "trace": [
+              "new BaseLoadBalancer (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-load-balancer.js:35:26)",
+              "new ApplicationLoadBalancer (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.js:28:9)",
+              "new ApplicationLoadBalancedServiceBase (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/application-load-balanced-service-base.js:55:89)",
+              "new ApplicationLoadBalancedFargateService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:22:9)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/EcsStack/Globalmantics-Fargate/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsFargateLBSecurityGroupC901EF59",
+            "trace": [
+              "new SecurityGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:215:30)",
+              "new ApplicationLoadBalancer (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.js:34:56)",
+              "new ApplicationLoadBalancedServiceBase (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/application-load-balanced-service-base.js:55:89)",
+              "new ApplicationLoadBalancedFargateService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:22:9)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/EcsStack/Globalmantics-Fargate/LB/SecurityGroup/to EcsStackGlobalmanticsFargateServiceSecurityGroupC7C67BDC:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsFargateLBSecurityGrouptoEcsStackGlobalmanticsFargateServiceSecurityGroupC7C67BDC800DD948C0",
+            "trace": [
+              "SecurityGroup.addEgressRule (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:72:13)",
+              "SecurityGroup.addEgressRule (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:347:19)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:81:31",
+              "ReactiveList.forEachAndForever (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:226:13)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:80:51",
+              "ReactiveList.forEachAndForever (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:226:13)",
+              "Connections.allowTo (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:79:30)",
+              "Connections.allowFrom (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:112:31)",
+              "ApplicationListener.registerConnectable (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:323:33)",
+              "ApplicationTargetGroup.registerConnectable (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:123:22)",
+              "Object.attachToApplicationTargetGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:323:29)",
+              "FargateService.attachToApplicationTargetGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:284:47)",
+              "ApplicationTargetGroup.addTarget (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:74:35)",
+              "ApplicationLoadBalancedFargateService.addServiceAsTarget (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/application-load-balanced-service-base.js:164:26)",
+              "new ApplicationLoadBalancedFargateService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:78:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/EcsStack/Globalmantics-Fargate/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsFargateLBPublicListenerCEF9D7E9",
+            "trace": [
+              "new BaseListener (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-listener.js:21:26)",
+              "new ApplicationListener (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:32:9)",
+              "ApplicationLoadBalancer.addListener (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.js:74:26)",
+              "new ApplicationLoadBalancedServiceBase (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/application-load-balanced-service-base.js:67:38)",
+              "new ApplicationLoadBalancedFargateService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:22:9)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/EcsStack/Globalmantics-Fargate/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsFargateLBPublicListenerECSGroupC5501FC0",
+            "trace": [
+              "new TargetGroupBase (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-target-group.js:44:25)",
+              "new ApplicationTargetGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:26:9)",
+              "ApplicationListener.addTargets (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:228:23)",
+              "new ApplicationLoadBalancedServiceBase (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/application-load-balanced-service-base.js:73:42)",
+              "new ApplicationLoadBalancedFargateService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:22:9)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/EcsStack/Globalmantics-Fargate/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsFargateLoadBalancerDNSBE4DD5D5",
+            "trace": [
+              "new ApplicationLoadBalancedServiceBase (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/application-load-balanced-service-base.js:133:9)",
+              "new ApplicationLoadBalancedFargateService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:22:9)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/EcsStack/Globalmantics-Fargate/ServiceURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsFargateServiceURL08079F55",
+            "trace": [
+              "new ApplicationLoadBalancedServiceBase (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/application-load-balanced-service-base.js:134:9)",
+              "new ApplicationLoadBalancedFargateService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:22:9)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/EcsStack/Globalmantics-Fargate/TaskDef/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsFargateTaskDefTaskRole5B056007",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "new TaskDefinition (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.js:97:43)",
+              "new FargateTaskDefinition (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-task-definition.js:22:9)",
+              "new ApplicationLoadBalancedFargateService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:32:35)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/EcsStack/Globalmantics-Fargate/TaskDef/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsFargateTaskDefF9B937E7",
+            "trace": [
+              "new TaskDefinition (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.js:104:25)",
+              "new FargateTaskDefinition (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-task-definition.js:22:9)",
+              "new ApplicationLoadBalancedFargateService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:32:35)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/EcsStack/Globalmantics-Fargate/TaskDef/Globalmantics-Landing-Page/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsFargateTaskDefGlobalmanticsLandingPageLogGroup130C915B",
+            "trace": [
+              "new LogGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-logs/lib/log-group.js:165:26)",
+              "AwsLogDriver.bind (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/log-drivers/aws-log-driver.js:45:48)",
+              "new ContainerDefinition (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/container-definition.js:114:50)",
+              "FargateTaskDefinition.addContainer (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.js:265:16)",
+              "new ApplicationLoadBalancedFargateService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:45:51)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/EcsStack/Globalmantics-Fargate/TaskDef/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsFargateTaskDefExecutionRole0CF7D86F",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "FargateTaskDefinition.obtainExecutionRole (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.js:340:35)",
+              "Object.bind (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/container-image.js:50:79)",
+              "new ContainerDefinition (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/container-definition.js:112:40)",
+              "FargateTaskDefinition.addContainer (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.js:265:16)",
+              "new ApplicationLoadBalancedFargateService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:45:51)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/EcsStack/Globalmantics-Fargate/TaskDef/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsFargateTaskDefExecutionRoleDefaultPolicyDD7B0BC4",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-iam/lib/role.js:209:34)",
+              "Function.addToPrincipal (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-iam/lib/grant.js:90:65)",
+              "Function.addToPrincipalOrResource (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-iam/lib/grant.js:45:30)",
+              "Import.grant (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecr/lib/repository.js:154:26)",
+              "Import.grantPull (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecr/lib/repository.js:168:26)",
+              "Object.bind (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/container-image.js:50:34)",
+              "new ContainerDefinition (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/container-definition.js:112:40)",
+              "FargateTaskDefinition.addContainer (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.js:265:16)",
+              "new ApplicationLoadBalancedFargateService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:45:51)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/EcsStack/Globalmantics-Fargate/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsFargateService60014155",
+            "trace": [
+              "new BaseService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:142:25)",
+              "new FargateService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-service.js:34:9)",
+              "new ApplicationLoadBalancedFargateService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:60:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/EcsStack/Globalmantics-Fargate/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsFargateServiceSecurityGroupEE9526CB",
+            "trace": [
+              "new SecurityGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:215:30)",
+              "FargateService.configureAwsVpcNetworkingWithSecurityGroups (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:531:31)",
+              "new FargateService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-service.js:52:14)",
+              "new ApplicationLoadBalancedFargateService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:60:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/EcsStack/Globalmantics-Fargate/Service/SecurityGroup/from EcsStackGlobalmanticsFargateLBSecurityGroup80647DBC:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GlobalmanticsFargateServiceSecurityGroupfromEcsStackGlobalmanticsFargateLBSecurityGroup80647DBC805D7F1B03",
+            "trace": [
+              "SecurityGroup.addIngressRule (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:57:13)",
+              "SecurityGroup.addIngressRule (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:307:19)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:106:31",
+              "ReactiveList.forEachAndForever (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:226:13)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:105:51",
+              "ReactiveList.forEachAndForever (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:226:13)",
+              "Connections.allowFrom (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ec2/lib/connections.js:104:30)",
+              "ApplicationListener.registerConnectable (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:323:33)",
+              "ApplicationTargetGroup.registerConnectable (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:123:22)",
+              "Object.attachToApplicationTargetGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:323:29)",
+              "FargateService.attachToApplicationTargetGroup (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:284:47)",
+              "ApplicationTargetGroup.addTarget (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:74:35)",
+              "ApplicationLoadBalancedFargateService.addServiceAsTarget (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/base/application-load-balanced-service-base.js:164:26)",
+              "new ApplicationLoadBalancedFargateService (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:78:14)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8367:58",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "Kernel._create (/tmp/tmp8e6nr5z9/lib/program.js:8367:34)",
+              "Kernel.create (/tmp/tmp8e6nr5z9/lib/program.js:8108:29)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ],
+        "/EcsStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-eQa65j/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:134",
+              "Kernel._wrapSandboxCode (/tmp/tmp8e6nr5z9/lib/program.js:8795:24)",
+              "/tmp/tmp8e6nr5z9/lib/program.js:8183:107",
+              "Kernel._ensureSync (/tmp/tmp8e6nr5z9/lib/program.js:8776:28)",
+              "Kernel.invoke (/tmp/tmp8e6nr5z9/lib/program.js:8183:34)",
+              "KernelHost.processRequest (/tmp/tmp8e6nr5z9/lib/program.js:9692:36)",
+              "KernelHost.run (/tmp/tmp8e6nr5z9/lib/program.js:9655:22)",
+              "Immediate._onImmediate (/tmp/tmp8e6nr5z9/lib/program.js:9656:46)",
+              "processImmediate (node:internal/timers:464:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "EcsStack"
+    }
+  }
+}

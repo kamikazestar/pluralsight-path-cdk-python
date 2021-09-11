@@ -1,0 +1,471 @@
+{
+  "Resources": {
+    "BastionInstanceSecurityGroup71C3847E": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "InstanceStack/Bastion/Resource/InstanceSecurityGroup",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "bastion-host"
+          }
+        ],
+        "VpcId": {
+          "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCB9E5F0B4BD23A326"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/Bastion/Resource/InstanceSecurityGroup/Resource"
+      }
+    },
+    "BastionInstanceRoleD3B36EDD": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ec2.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "bastion-host"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/Bastion/Resource/InstanceRole/Resource"
+      }
+    },
+    "BastionInstanceRoleDefaultPolicy457C3156": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "ssmmessages:*",
+                "ssm:UpdateInstanceInformation",
+                "ec2messages:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "BastionInstanceRoleDefaultPolicy457C3156",
+        "Roles": [
+          {
+            "Ref": "BastionInstanceRoleD3B36EDD"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/Bastion/Resource/InstanceRole/DefaultPolicy/Resource"
+      }
+    },
+    "BastionInstanceProfile8FFAF242": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Roles": [
+          {
+            "Ref": "BastionInstanceRoleD3B36EDD"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/Bastion/Resource/InstanceProfile"
+      }
+    },
+    "Bastion6045F255": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "AvailabilityZone": "eu-central-1a",
+        "IamInstanceProfile": {
+          "Ref": "BastionInstanceProfile8FFAF242"
+        },
+        "ImageId": {
+          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+        },
+        "InstanceType": "t3.micro",
+        "SecurityGroupIds": [
+          {
+            "Fn::GetAtt": [
+              "BastionInstanceSecurityGroup71C3847E",
+              "GroupId"
+            ]
+          }
+        ],
+        "SubnetId": {
+          "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCPrivateSubnet1Subnet8BCA10E01F79A1B7"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "bastion-host"
+          }
+        ],
+        "UserData": {
+          "Fn::Base64": "#!/bin/bash"
+        }
+      },
+      "DependsOn": [
+        "BastionInstanceRoleDefaultPolicy457C3156",
+        "BastionInstanceRoleD3B36EDD"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/Bastion/Resource/Resource"
+      }
+    },
+    "ALBAEE750D2": {
+      "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "Properties": {
+        "LoadBalancerAttributes": [
+          {
+            "Key": "deletion_protection.enabled",
+            "Value": "false"
+          }
+        ],
+        "Name": "myALB",
+        "Scheme": "internet-facing",
+        "SecurityGroups": [
+          {
+            "Fn::GetAtt": [
+              "ALBSecurityGroup8B8624F8",
+              "GroupId"
+            ]
+          }
+        ],
+        "Subnets": [
+          {
+            "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCPublicSubnet1SubnetB4246D30D84F935B"
+          },
+          {
+            "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCPublicSubnet2Subnet74179F3969CC10AD"
+          },
+          {
+            "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCPublicSubnet3Subnet631C5E25B13F8123"
+          }
+        ],
+        "Type": "application"
+      },
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/ALB/Resource"
+      }
+    },
+    "ALBSecurityGroup8B8624F8": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Automatically created Security Group for ELB InstanceStackALB0BD525CF",
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Internet access ALB 80",
+            "FromPort": 80,
+            "IpProtocol": "tcp",
+            "ToPort": 80
+          }
+        ],
+        "VpcId": {
+          "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCB9E5F0B4BD23A326"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/ALB/SecurityGroup/Resource"
+      }
+    },
+    "ALBSecurityGrouptoInstanceStackGlobalmanticsWebInstanceSecurityGroup28A61C7780E47E9385": {
+      "Type": "AWS::EC2::SecurityGroupEgress",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "ALBSecurityGroup8B8624F8",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "Description": "ALB access port 80 of EC2 in ASG",
+        "DestinationSecurityGroupId": {
+          "Fn::GetAtt": [
+            "GlobalmanticsWebInstanceSecurityGroup316D3AB3",
+            "GroupId"
+          ]
+        },
+        "FromPort": 80,
+        "ToPort": 80
+      },
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/ALB/SecurityGroup/to InstanceStackGlobalmanticsWebInstanceSecurityGroup28A61C77:80"
+      }
+    },
+    "ALBWeb606B0C4F": {
+      "Type": "AWS::ElasticLoadBalancingV2::Listener",
+      "Properties": {
+        "DefaultActions": [
+          {
+            "TargetGroupArn": {
+              "Ref": "ALBWebaddTargetGroupGroup2DA44672"
+            },
+            "Type": "forward"
+          }
+        ],
+        "LoadBalancerArn": {
+          "Ref": "ALBAEE750D2"
+        },
+        "Port": 80,
+        "Protocol": "HTTP"
+      },
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/ALB/Web/Resource"
+      }
+    },
+    "ALBWebaddTargetGroupGroup2DA44672": {
+      "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "Properties": {
+        "Port": 80,
+        "Protocol": "HTTP",
+        "TargetType": "instance",
+        "VpcId": {
+          "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCB9E5F0B4BD23A326"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/ALB/Web/addTargetGroupGroup/Resource"
+      }
+    },
+    "GlobalmanticsWebInstanceSecurityGroup316D3AB3": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "InstanceStack/Globalmantics-Web/InstanceSecurityGroup",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "InstanceStack/Globalmantics-Web"
+          }
+        ],
+        "VpcId": {
+          "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCB9E5F0B4BD23A326"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/Globalmantics-Web/InstanceSecurityGroup/Resource"
+      }
+    },
+    "GlobalmanticsWebInstanceSecurityGroupfromInstanceStackALBSecurityGroup68F3C52C80DFFE536E": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "Properties": {
+        "IpProtocol": "tcp",
+        "Description": "ALB access port 80 of EC2 in ASG",
+        "FromPort": 80,
+        "GroupId": {
+          "Fn::GetAtt": [
+            "GlobalmanticsWebInstanceSecurityGroup316D3AB3",
+            "GroupId"
+          ]
+        },
+        "SourceSecurityGroupId": {
+          "Fn::GetAtt": [
+            "ALBSecurityGroup8B8624F8",
+            "GroupId"
+          ]
+        },
+        "ToPort": 80
+      },
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/Globalmantics-Web/InstanceSecurityGroup/from InstanceStackALBSecurityGroup68F3C52C:80"
+      }
+    },
+    "GlobalmanticsWebInstanceRole73AF3E7D": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ec2.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "InstanceStack/Globalmantics-Web"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/Globalmantics-Web/InstanceRole/Resource"
+      }
+    },
+    "GlobalmanticsWebInstanceRoleDefaultPolicy8FF2CB83": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "ssmmessages:*",
+                "ssm:UpdateInstanceInformation",
+                "ec2messages:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "GlobalmanticsWebInstanceRoleDefaultPolicy8FF2CB83",
+        "Roles": [
+          {
+            "Ref": "GlobalmanticsWebInstanceRole73AF3E7D"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/Globalmantics-Web/InstanceRole/DefaultPolicy/Resource"
+      }
+    },
+    "GlobalmanticsWebInstanceProfileEE95F5E0": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Roles": [
+          {
+            "Ref": "GlobalmanticsWebInstanceRole73AF3E7D"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/Globalmantics-Web/InstanceProfile"
+      }
+    },
+    "GlobalmanticsWebLaunchConfigB11CE1EB": {
+      "Type": "AWS::AutoScaling::LaunchConfiguration",
+      "Properties": {
+        "ImageId": {
+          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+        },
+        "InstanceType": "t3.micro",
+        "IamInstanceProfile": {
+          "Ref": "GlobalmanticsWebInstanceProfileEE95F5E0"
+        },
+        "SecurityGroups": [
+          {
+            "Fn::GetAtt": [
+              "GlobalmanticsWebInstanceSecurityGroup316D3AB3",
+              "GroupId"
+            ]
+          }
+        ],
+        "UserData": {
+          "Fn::Base64": "#!/bin/bash\n# Install Apache web server and PHP\nyum install -y httpd git\n# Download lab files\ngit clone https://github.com/ps-interactive/lab_aws_implement-auto-scaling-amazon-ecs\nrm -rf /var/www/html/*\nmv lab_aws_implement-auto-scaling-amazon-ecs/webapp/* /var/www/html/\n# Turn on webserver\nchkconfig httpd on\nservice httpd start"
+        }
+      },
+      "DependsOn": [
+        "GlobalmanticsWebInstanceRoleDefaultPolicy8FF2CB83",
+        "GlobalmanticsWebInstanceRole73AF3E7D"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/Globalmantics-Web/LaunchConfig"
+      }
+    },
+    "GlobalmanticsWebASG5F6CEB0B": {
+      "Type": "AWS::AutoScaling::AutoScalingGroup",
+      "Properties": {
+        "MaxSize": "5",
+        "MinSize": "2",
+        "DesiredCapacity": "2",
+        "LaunchConfigurationName": {
+          "Ref": "GlobalmanticsWebLaunchConfigB11CE1EB"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "PropagateAtLaunch": true,
+            "Value": "InstanceStack/Globalmantics-Web"
+          }
+        ],
+        "TargetGroupARNs": [
+          {
+            "Ref": "ALBWebaddTargetGroupGroup2DA44672"
+          }
+        ],
+        "VPCZoneIdentifier": [
+          {
+            "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCPrivateSubnet1Subnet8BCA10E01F79A1B7"
+          },
+          {
+            "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCPrivateSubnet2SubnetCFCDAA7AB22CF85D"
+          },
+          {
+            "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCPrivateSubnet3Subnet3EDCD457113A215F"
+          }
+        ]
+      },
+      "UpdatePolicy": {
+        "AutoScalingScheduledAction": {
+          "IgnoreUnmodifiedGroupSizeProperties": true
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/Globalmantics-Web/ASG"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/2VQzW7CMAx+Fu4hUHbYdQNNDKnSqnYv4IW0ZKRJlTjbqqrvPiesFYOT7e/HfxnPNhlfL57g2y/F8bwahHWSDxWCOLNdbd4CdgFjVoCDVqJ0rJTeBick21nj0QWR+AkdWew1SLHhwxY8KmtercdcmfDDDmQAQ9ZKiuAU9ntnQxftd8AsvSVfGie9v4MPJuEjU9DyobQ6OVMsrFaiT0fM2dS+cLZWmraWOi4rtIXjB2iilGm+6IbnriMPxDty4raJoy9Qj3/1tU55lOZPM+VX/Du4RuJ86VVJzwtovQBN02k2FdWlmNU5BCNO9PpaNcGlfhG+lY7jyIoeT9asHvgjz9aLT6/U0gWDqpW8vMRfus1v0wACAAA="
+      },
+      "Metadata": {
+        "aws:cdk:path": "InstanceStack/CDKMetadata/Default"
+      }
+    }
+  },
+  "Outputs": {
+    "BastionBastionHostId8F8CEB82": {
+      "Description": "Instance ID of the bastion host. Use this to connect via SSM Session Manager",
+      "Value": {
+        "Ref": "Bastion6045F255"
+      }
+    },
+    "ElbEndpoint": {
+      "Value": {
+        "Fn::GetAtt": [
+          "ALBAEE750D2",
+          "DNSName"
+        ]
+      }
+    }
+  },
+  "Parameters": {
+    "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter": {
+      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+      "Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
+    }
+  }
+}

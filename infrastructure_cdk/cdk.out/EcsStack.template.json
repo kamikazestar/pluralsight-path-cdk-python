@@ -1,0 +1,428 @@
+{
+  "Resources": {
+    "GlobalmanticsEcsClusterABC1AF85": {
+      "Type": "AWS::ECS::Cluster",
+      "Metadata": {
+        "aws:cdk:path": "EcsStack/Globalmantics-Ecs-Cluster/Resource"
+      }
+    },
+    "GlobalmanticsFargateLB78042049": {
+      "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "Properties": {
+        "LoadBalancerAttributes": [
+          {
+            "Key": "deletion_protection.enabled",
+            "Value": "false"
+          }
+        ],
+        "Scheme": "internet-facing",
+        "SecurityGroups": [
+          {
+            "Fn::GetAtt": [
+              "GlobalmanticsFargateLBSecurityGroupC901EF59",
+              "GroupId"
+            ]
+          }
+        ],
+        "Subnets": [
+          {
+            "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCPublicSubnet1SubnetB4246D30D84F935B"
+          },
+          {
+            "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCPublicSubnet2Subnet74179F3969CC10AD"
+          },
+          {
+            "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCPublicSubnet3Subnet631C5E25B13F8123"
+          }
+        ],
+        "Type": "application"
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsStack/Globalmantics-Fargate/LB/Resource"
+      }
+    },
+    "GlobalmanticsFargateLBSecurityGroupC901EF59": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Automatically created Security Group for ELB EcsStackGlobalmanticsFargateLB809EE2E2",
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow from anyone on port 80",
+            "FromPort": 80,
+            "IpProtocol": "tcp",
+            "ToPort": 80
+          }
+        ],
+        "VpcId": {
+          "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCB9E5F0B4BD23A326"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsStack/Globalmantics-Fargate/LB/SecurityGroup/Resource"
+      }
+    },
+    "GlobalmanticsFargateLBSecurityGrouptoEcsStackGlobalmanticsFargateServiceSecurityGroupC7C67BDC800DD948C0": {
+      "Type": "AWS::EC2::SecurityGroupEgress",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "GlobalmanticsFargateLBSecurityGroupC901EF59",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "Description": "Load balancer to target",
+        "DestinationSecurityGroupId": {
+          "Fn::GetAtt": [
+            "GlobalmanticsFargateServiceSecurityGroupEE9526CB",
+            "GroupId"
+          ]
+        },
+        "FromPort": 80,
+        "ToPort": 80
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsStack/Globalmantics-Fargate/LB/SecurityGroup/to EcsStackGlobalmanticsFargateServiceSecurityGroupC7C67BDC:80"
+      }
+    },
+    "GlobalmanticsFargateLBPublicListenerCEF9D7E9": {
+      "Type": "AWS::ElasticLoadBalancingV2::Listener",
+      "Properties": {
+        "DefaultActions": [
+          {
+            "TargetGroupArn": {
+              "Ref": "GlobalmanticsFargateLBPublicListenerECSGroupC5501FC0"
+            },
+            "Type": "forward"
+          }
+        ],
+        "LoadBalancerArn": {
+          "Ref": "GlobalmanticsFargateLB78042049"
+        },
+        "Port": 80,
+        "Protocol": "HTTP"
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsStack/Globalmantics-Fargate/LB/PublicListener/Resource"
+      }
+    },
+    "GlobalmanticsFargateLBPublicListenerECSGroupC5501FC0": {
+      "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "Properties": {
+        "Port": 80,
+        "Protocol": "HTTP",
+        "TargetType": "ip",
+        "VpcId": {
+          "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCB9E5F0B4BD23A326"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsStack/Globalmantics-Fargate/LB/PublicListener/ECSGroup/Resource"
+      }
+    },
+    "GlobalmanticsFargateTaskDefTaskRole5B056007": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ecs-tasks.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsStack/Globalmantics-Fargate/TaskDef/TaskRole/Resource"
+      }
+    },
+    "GlobalmanticsFargateTaskDefF9B937E7": {
+      "Type": "AWS::ECS::TaskDefinition",
+      "Properties": {
+        "ContainerDefinitions": [
+          {
+            "Essential": true,
+            "Image": {
+              "Fn::Join": [
+                "",
+                [
+                  "489811560964.dkr.ecr.eu-central-1.",
+                  {
+                    "Ref": "AWS::URLSuffix"
+                  },
+                  "/aws-cdk/assets:7947cc96e9ef22eda3bb5f48e1e03b43057e9a0d21e45f2e03449e2da144c3f5"
+                ]
+              ]
+            },
+            "LogConfiguration": {
+              "LogDriver": "awslogs",
+              "Options": {
+                "awslogs-group": {
+                  "Ref": "GlobalmanticsFargateTaskDefGlobalmanticsLandingPageLogGroup130C915B"
+                },
+                "awslogs-stream-prefix": "Globalmantics-Fargate",
+                "awslogs-region": "eu-central-1"
+              }
+            },
+            "Name": "Globalmantics-Landing-Page",
+            "PortMappings": [
+              {
+                "ContainerPort": 80,
+                "Protocol": "tcp"
+              }
+            ]
+          }
+        ],
+        "Cpu": "256",
+        "ExecutionRoleArn": {
+          "Fn::GetAtt": [
+            "GlobalmanticsFargateTaskDefExecutionRole0CF7D86F",
+            "Arn"
+          ]
+        },
+        "Family": "EcsStackGlobalmanticsFargateTaskDef5931EEA2",
+        "Memory": "512",
+        "NetworkMode": "awsvpc",
+        "RequiresCompatibilities": [
+          "FARGATE"
+        ],
+        "TaskRoleArn": {
+          "Fn::GetAtt": [
+            "GlobalmanticsFargateTaskDefTaskRole5B056007",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsStack/Globalmantics-Fargate/TaskDef/Resource"
+      }
+    },
+    "GlobalmanticsFargateTaskDefGlobalmanticsLandingPageLogGroup130C915B": {
+      "Type": "AWS::Logs::LogGroup",
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "EcsStack/Globalmantics-Fargate/TaskDef/Globalmantics-Landing-Page/LogGroup/Resource"
+      }
+    },
+    "GlobalmanticsFargateTaskDefExecutionRole0CF7D86F": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ecs-tasks.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsStack/Globalmantics-Fargate/TaskDef/ExecutionRole/Resource"
+      }
+    },
+    "GlobalmanticsFargateTaskDefExecutionRoleDefaultPolicyDD7B0BC4": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":ecr:eu-central-1:489811560964:repository/aws-cdk/assets"
+                  ]
+                ]
+              }
+            },
+            {
+              "Action": "ecr:GetAuthorizationToken",
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "GlobalmanticsFargateTaskDefGlobalmanticsLandingPageLogGroup130C915B",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "GlobalmanticsFargateTaskDefExecutionRoleDefaultPolicyDD7B0BC4",
+        "Roles": [
+          {
+            "Ref": "GlobalmanticsFargateTaskDefExecutionRole0CF7D86F"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsStack/Globalmantics-Fargate/TaskDef/ExecutionRole/DefaultPolicy/Resource"
+      }
+    },
+    "GlobalmanticsFargateService60014155": {
+      "Type": "AWS::ECS::Service",
+      "Properties": {
+        "Cluster": {
+          "Ref": "GlobalmanticsEcsClusterABC1AF85"
+        },
+        "DeploymentConfiguration": {
+          "MaximumPercent": 200,
+          "MinimumHealthyPercent": 50
+        },
+        "DesiredCount": 3,
+        "EnableECSManagedTags": false,
+        "HealthCheckGracePeriodSeconds": 60,
+        "LaunchType": "FARGATE",
+        "LoadBalancers": [
+          {
+            "ContainerName": "Globalmantics-Landing-Page",
+            "ContainerPort": 80,
+            "TargetGroupArn": {
+              "Ref": "GlobalmanticsFargateLBPublicListenerECSGroupC5501FC0"
+            }
+          }
+        ],
+        "NetworkConfiguration": {
+          "AwsvpcConfiguration": {
+            "AssignPublicIp": "DISABLED",
+            "SecurityGroups": [
+              {
+                "Fn::GetAtt": [
+                  "GlobalmanticsFargateServiceSecurityGroupEE9526CB",
+                  "GroupId"
+                ]
+              }
+            ],
+            "Subnets": [
+              {
+                "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCPrivateSubnet1Subnet8BCA10E01F79A1B7"
+              },
+              {
+                "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCPrivateSubnet2SubnetCFCDAA7AB22CF85D"
+              },
+              {
+                "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCPrivateSubnet3Subnet3EDCD457113A215F"
+              }
+            ]
+          }
+        },
+        "TaskDefinition": {
+          "Ref": "GlobalmanticsFargateTaskDefF9B937E7"
+        }
+      },
+      "DependsOn": [
+        "GlobalmanticsFargateLBPublicListenerECSGroupC5501FC0",
+        "GlobalmanticsFargateLBPublicListenerCEF9D7E9"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "EcsStack/Globalmantics-Fargate/Service/Service"
+      }
+    },
+    "GlobalmanticsFargateServiceSecurityGroupEE9526CB": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "EcsStack/Globalmantics-Fargate/Service/SecurityGroup",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "VpcId": {
+          "Fn::ImportValue": "NetworkStack:ExportsOutputRefVPCB9E5F0B4BD23A326"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsStack/Globalmantics-Fargate/Service/SecurityGroup/Resource"
+      }
+    },
+    "GlobalmanticsFargateServiceSecurityGroupfromEcsStackGlobalmanticsFargateLBSecurityGroup80647DBC805D7F1B03": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "Properties": {
+        "IpProtocol": "tcp",
+        "Description": "Load balancer to target",
+        "FromPort": 80,
+        "GroupId": {
+          "Fn::GetAtt": [
+            "GlobalmanticsFargateServiceSecurityGroupEE9526CB",
+            "GroupId"
+          ]
+        },
+        "SourceSecurityGroupId": {
+          "Fn::GetAtt": [
+            "GlobalmanticsFargateLBSecurityGroupC901EF59",
+            "GroupId"
+          ]
+        },
+        "ToPort": 80
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsStack/Globalmantics-Fargate/Service/SecurityGroup/from EcsStackGlobalmanticsFargateLBSecurityGroup80647DBC:80"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/31R207DMAz9lr2n2YUHXtkF0KRJTN1+wGReMe2SKnaGqqr/TtJdNAbiycfHxzm2M9bjyViPBk/wxZnZlcPWOI+63QiYUk2ZUSIsyBZqvrdvQeogau4siw9GEpcju+ANdio90aJh3c6rwII+lS/wBXwBglvgcoF7siTkbBLcM84KkEV/w517N+iPZDA1nWGn0PgM0pSsF86U6JcHKLCfO9V0jrVjEuebGTBGirMaJA5kWU/ruiIDyWLlYDeDCqzB3Z0bVsBCpoqK914Rb3Gc6Pbv7n7nH/mtjuIp7FlzwTf1bXRGefUu1KfLXNO0aPTcoAmepLlK/ieeC4/Mv+il7flOERx0m7uqP2kf1y7O0qT0hDpVuSJ+6MoVV4sL7rpOrRv5cHb4oB/1eDT4ZKLMByt0QJ2f4jeL8TGWYQIAAA=="
+      },
+      "Metadata": {
+        "aws:cdk:path": "EcsStack/CDKMetadata/Default"
+      }
+    }
+  },
+  "Outputs": {
+    "GlobalmanticsFargateLoadBalancerDNSBE4DD5D5": {
+      "Value": {
+        "Fn::GetAtt": [
+          "GlobalmanticsFargateLB78042049",
+          "DNSName"
+        ]
+      }
+    },
+    "GlobalmanticsFargateServiceURL08079F55": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "http://",
+            {
+              "Fn::GetAtt": [
+                "GlobalmanticsFargateLB78042049",
+                "DNSName"
+              ]
+            }
+          ]
+        ]
+      }
+    }
+  }
+}
